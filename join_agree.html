@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">제주맥주</a></div>
+        <div class="user_info"><a href="login.html">로그인</a></div>
+        <div class="user_info"><a href="join.html">회원가입</a></div>
+    </header>
+
+    <nav class="clear">
+        <ul>
+            <li><a href="index.html">EVENT</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <div class="nav-btn">
+            <a href="#"><img src="./img/share.png" width="50" alt=""></a>
+        </div>
+        <div class="nav-gray-btn">
+            <a href="#"><img src="./img/up.png" width="50" alt=""></a>
+        </div>
+    </aside>
+    <main>
+        <div>
+            <h1>JOIN</h1>
+            <p>안녕하세요 제주맥주입니다.</p>
+        </div>
+        <div>
+            <form id="agree_label" action="#">
+                <div>
+                    <input type="checkbox" id="agree_all">
+                    <label for="agree_all">이용학관, 개인정보 수집 및 이용에 모두 동의합니다. </label>
+                </div>
+                <div>
+                    <input type="checkbox" id="agree_terms" name="agree_terms" value="Y">
+                    <label for="agree_terms">이용약관 동의(필수)</label><br>
+                </div>
+                <textarea rows="10" cols="70" readonly>
+
+제1조 (목적)
+이 약관은 제주 패밀리 주식회사(전자상거래 사업자)가 운영하는...
+
+제 2조 (정의)
+... 
+                    </textarea>
+                <div>
+                    <input type="checkbox" id="user_info_agree" name="agree_terms" value="Y">
+                    <label for="user_info_agree">이용약관 동의(필수)</label><br>
+                </div>
+                <textarea rows="10" cols="70" readonly>
+
+1. 개인정보 수집목적 및 이용목적
+(1) 홈페이지 회원 가입 및 관리
+...
+</textarea>
+                <div>
+                    마케팅 활용 동의 및 광고 수신 동의<br>
+                    서비스와 관련된 신상품 소식, 이벤트 안내, 고객 혜택 등 다양한 정보를 제공합니다.<br>
+                    <input type="checkbox" id="marketing_sms_agree" name="marketing_sms_agree" value="Y">
+                    <label for="marketing_sms_agree">SMS 수신 동의 (선택)</label><br>
+                    <input type="checkbox" id="marketing_email_agree" name="marketing_email_agree" value="Y">
+                    <label for="marketing_email_agree">E-Mail 수신 동의 (선택)</label><br>
+                </div>
+                <div>
+                    <button type="reset" onclick="resetClick();">취소</button>
+                    <script>
+                        let resetClick=function(){
+                            location.href="index.html";
+                        }
+                 
+
+                    </script>
+                    <button type="submit" onclick="checkAgree()">가입하기</button>
+                    <script>
+                        function checkAgree(){
+                            var agreeTerms=document.getElementById('agree_terms');
+                            var userInfoAgree=document.getElementById('user_info_agree');
+                            if(agreeTerms.checked==false||userInfoAgree.checked==false){
+                                alert("동의에 체크하세요.");
+                            }
+                            console.log(agreeTerms.checked, userInfoAgree.checked);
+                        }
+                    </script>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            제주맥주 주식회사 대표이사 XXX<br>
+            본사) 본사 주소<br>
+            호스팅 제공자 XXX &nbsp;&nbsp;&nbsp;사업자등록번호 xxx-xx-xxxxx
+            개인정보보호책임자 XXX &nbsp;&nbsp;&nbsp;고객센터 123-456-789, 123@123.co.kr
+        </div>
+    </footer>
+</body>
+
+</html>

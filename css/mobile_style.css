@@ -1,0 +1,43 @@
+*{
+    font-family: 'Gotham','Spoqa Han Sans Neo';
+    color: #666;
+    font-size: 1vm;
+    line-height: 1.5;
+}
+li a{
+    display: inline-block;
+}
+article, div{
+    text-align: center;
+}
+h1{
+    color: #1ecad3;
+    font-weight: bold;
+    font-size: 3vm;
+}
+.logo{
+    width: 80%;
+    float: left;
+}
+.logo a:focus, .logo a:hover{
+    text-decoration: none;
+}
+nav a:focus, nav a:hover{
+    text-decoration: underline;
+}
+a:link, a:visited{
+    text-decoration: none;
+}
+.user_info{
+    width: 10%;
+    float: left;
+}
+.clear{
+    clear: left;
+}
+.font-size{
+    font-size: 0.5vm;
+}
+li{
+    padding: 10vm;
+}

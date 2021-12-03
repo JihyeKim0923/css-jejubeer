@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a class="main-font" href="index.html">제주맥주</a></div>
+        <div class="user_info"><a href="login.html">로그인</a></div>
+        <div class="user_info"><a href="join.html">회원가입</a></div>
+    </header>
+
+    <nav class="clear">
+        <ul>
+            <li><a href="index.html">EVENT</a></li>
+            <li><a href="shop.html">SHOP</a></li>
+            <li><a href="about_us.html">ABOUT US</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <div class="nav-btn">
+            <a href="#"><img src="./img/share.png" width="50" alt=""></a>
+        </div>
+        <div class="nav-gray-btn">
+            <a href="#"><img src="./img/up.png" width="50" alt=""></a>
+        </div>
+    </aside>
+    <main>
+        <div>
+            <h1>JOIN</h1>
+            안녕하세요 제주맥주입니다.
+        </div>
+        <div id="join">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div>
+                    <input id="photo" name="photo" type="file">
+                </div>
+                <div>
+                    <label for="email">이메일&centerdot;</label><br>
+                    <input id="email" name="email" type="email" placeholder="이메일">
+                </div>
+                <div>
+                    <label for="pass1">비밀번호&centerdot;</label><br>
+                    <input id="pass1" name="pass" type="password" placeholder="비밀번호"><br>
+                    <input id="pass2" type="password" placeholder="비밀번호 확인">
+                </div>
+                <div>
+                    <label for="name">이름&centerdot;</label><br>
+                    <input id="name" name="name" type="text" placeholder="이름">
+                </div>
+                <div id="gender-label">
+
+                    <label>성별&centerdot;</label><br>
+                    <div>
+                        <input id="man" name="gender" type="radio" value="man">
+                        <label for="man">남자</label>
+                    </div>
+                    <div>
+                        <input id="woman" name="gender" type="radio" value="woman">
+                        <label for="woman">여자</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="phone">연락처&centerdot;</label><br>
+                    <input id="phone" name="phone" type="text" placeholder="연락처">
+                </div>
+                <div>
+                    <label for="date">생년월일&centerdot;</label><br>
+                    <select name="birth_y" id="birth_y">
+                        <option value="">연</option>
+                        <script>
+                            for(var i=1900; i<=2021;i++){
+                                document.write("<option value='"+i+"</option>");
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div>
+                    <input id="agree_terms" name="agree_terms" type="hidden">
+                    <input id="user_info_agree" name="user_info_agree" type="hidden">
+                    <input id="marketing_sms_agree" name="marketing_sms_agree" type="hidden">
+                    <input id="marketing_email_agree" name="marketing_email_agree" type="hidden">
+                    <button type="button" onclick="formValidator()">가입하기</button>
+                    <script>
+                        let formValidator=function(){
+                            let email=document.getElementById('email');
+                            const regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+                            if(!regExp.test(email.value)){
+                                alert("이메일 형식에 맞지 않습니다.");
+                            }else{
+                                location.href="login.html";
+                            }
+                        }
+
+                    </script>
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            제주맥주 주식회사 대표이사 XXX<br>
+            본사) 본사 주소<br>
+            호스팅 제공자 XXX &nbsp;&nbsp;&nbsp;사업자등록번호 xxx-xx-xxxxx
+            개인정보보호책임자 XXX &nbsp;&nbsp;&nbsp;고객센터 123-456-789, 123@123.co.kr
+        </div>
+    </footer>
+</body>
+
+</html>

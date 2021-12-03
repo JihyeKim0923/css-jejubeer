@@ -1,0 +1,43 @@
+h1{
+    font-weight: bold;
+    font-size: 3.5em;
+    color: rgb(30, 202, 211);
+}
+*{
+    font-family: 'Gotham','Spoqa Han Sans Neo';
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+article,div{
+    text-align: center;
+}
+ul,li{
+    list-style: none;
+}
+.slide{height: 300px; overflow: hidden;}
+.slide ul{
+    width: 300%;
+    display: flex;
+    animation: slide 8s infinite;
+}
+.slide li{
+    width: 35%; height: 300px;
+}
+.slide li:nth-child(1){background: url(../img/news1.png); background-size: 100% 300px;}
+.slide li:nth-child(2){background: url(../img/news2.png); background-size: 100% 300px;}
+.slide li:nth-child(3){background: url(../img/news3.png); background-size: 100% 300px;}
+
+@keyframes slide{
+    0%{margin-left: 0;}
+    15%{margin-left: 0;}
+    30%{margin-left: -100%;}
+    50%{margin-left: -100%;}
+    70%{margin-left: -200%;}
+    85%{margin-left: -200%;}
+    100%{margin-left: 0;}
+}
+
+
